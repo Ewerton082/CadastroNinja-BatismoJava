@@ -3,3 +3,8 @@
 src é onde teremos nossa aplicacao e os testes
 
 pom.xml é o coração do maven ou seja a parte principal do projeto spring tipo um arquivo de configuraçao docker compose
+
+-----------------------------------------------------------------------------------------------------------------------
+ERROR White Label -> Significa que vc n atribuiu nenhuma rota para o seu projeto por isso esse erro
+
+Controller -> é oque liga o usuario ao servidor tipo um porteiro de predio
