@@ -7,4 +7,20 @@ pom.xml é o coração do maven ou seja a parte principal do projeto spring tipo
 -----------------------------------------------------------------------------------------------------------------------
 ERROR White Label -> Significa que vc n atribuiu nenhuma rota para o seu projeto por isso esse erro
 
-Controller -> é oque liga o usuario ao servidor tipo um porteiro de predio
+Controller -> é oque liga o usuario ao servidor tipo um porteiro de predio que vai receber a rotas
+
+-----------------------------------------------------------------------------------------------------------------------
+
+entidades / entity é a conversao das classes para tabelas para um BD trabalhar
+
+Spring Data JPA essa dependencia é oque faz conseguir trabalhar com dados persistentes nos dando decorators para utilizar
+
+@Entity essa decorator fala que é uma entidade para o sistema
+@Table(name = "") Adiciona o nome na tabela e diz que é uma table
+@Id é oque vai dizer que nosso atributo id é o escolhido para ser autoincrementado
+@GeneratedValue() a estrategia tem varios tipos olhar melhor la mas é como vai ser criado os id
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Apredendendo mais do git
+

@@ -1,7 +1,6 @@
 package dev.Batismo.CadastroDeNinjas;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 // o Decorator que diz que essa classe é o que vai mapear as rotas
 @RequestMapping
-public class Controller {
+public class NinjaController { // mais uma Vez o Padrao SPRING sufixo Controller
 
     //o getMapping é oque vai nomear a rota ou seja o endereço
     @GetMapping("/boasVindas")
