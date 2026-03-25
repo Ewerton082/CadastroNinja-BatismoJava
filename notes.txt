@@ -24,3 +24,6 @@ Spring Data JPA essa dependencia é oque faz conseguir trabalhar com dados persi
 
 Apredendendo mais do git
 
+git amend funciona para atualizar um commit seu sem criar um novo
+
+-----------------------------------------------------------------------------------------------------------------------

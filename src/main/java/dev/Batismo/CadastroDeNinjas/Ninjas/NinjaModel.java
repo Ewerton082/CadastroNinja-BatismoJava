@@ -1,6 +1,9 @@
-package dev.Batismo.CadastroDeNinjas;
+package dev.Batismo.CadastroDeNinjas.Ninjas;
 
+import dev.Batismo.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 // usando o Frame SPRING é uma convençao/ padrao usar o prefixo do objeto nesse caso Model
 @Entity // Isso aqui transforma tudo em entidade
@@ -13,11 +16,22 @@ public class NinjaModel {
     private String nome;
     private int idade;
     private String email;
+    private List<MissoesModel> missoes;
 
-    public NinjaModel(String nome, int idade, String email) {
+    public NinjaModel(long id, String nome, int idade, String email, List<MissoesModel> missoes) {
+        this.id = id;
         this.nome = nome;
         this.idade = idade;
         this.email = email;
+        this.missoes = missoes;
+    }
+
+    public List<MissoesModel> getMissoes() {
+        return missoes;
+    }
+
+    public void setMissoes(List<MissoesModel> missoes) {
+        this.missoes = missoes;
     }
 
     public NinjaModel() {
