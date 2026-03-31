@@ -27,3 +27,21 @@ Apredendendo mais do git
 git amend funciona para atualizar um commit seu sem criar um novo
 
 -----------------------------------------------------------------------------------------------------------------------
+
+LOMBOK > nos ajuda a criar os contrutores para a gente pra automatizar os noargs e allargs
+
+ele é muito pratico para otimizar tempo e deixar codigo mais legiveis
+
+@NoArgsConstructor > cria um construtor vazio
+@AllArgsConstructor > cria um construtor completo
+@Getter > So cria os getter
+@Setter > sóp cria os setter
+@Data > Cria getter e setter juntos
+
+ENTRE OUTROS METODOS QUE DESCONHEÇO
+
+aqui ja criou tudo
+
+-----------------------------------------------------------------------------------------------------------------------
+Aprendendo Melhor sobre commits
+

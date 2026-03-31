@@ -2,12 +2,16 @@ package dev.Batismo.CadastroDeNinjas.Missoes;
 
 import dev.Batismo.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
+import lombok.*;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
 @Entity
 @Table(name = "tb_missoes")
+@NoArgsConstructor // cria o construtor vazio
+@AllArgsConstructor // cria o contrutor completo
+@Data  // Criar geter e setters juntos
 public class MissoesModel {
 
     @Id
@@ -19,32 +23,4 @@ public class MissoesModel {
     @OneToMany(mappedBy = "missoes") // Aqui diz que diversos Ninjas podem ter essa missao e tbm n entendi bem como conecta uma na outra
     private List<NinjaModel> ninjas;
 
-    public MissoesModel(long id, String nomeMissao, DificuldadeEnum dificuldade) {
-        this.id = id;
-        this.nomeMissao = nomeMissao;
-        this.dificuldade = dificuldade;
-    }
-
-    public MissoesModel() {
-    }
-
-    public String getNomeMissao() {
-        return nomeMissao;
-    }
-
-    public void setNomeMissao(String nomeMissao) {
-        this.nomeMissao = nomeMissao;
-    }
-
-    public DificuldadeEnum getDificuldade() {
-        return dificuldade;
-    }
-
-    public void setDificuldade(DificuldadeEnum dificuldade) {
-        this.dificuldade = dificuldade;
-    }
-
-    public long getId() {
-        return id;
-    }
 }
