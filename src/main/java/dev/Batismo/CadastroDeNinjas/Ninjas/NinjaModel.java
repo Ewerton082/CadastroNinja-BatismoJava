@@ -26,6 +26,7 @@ public class NinjaModel {
 
     private int idade;
 
+    @Column(unique = true) // para dizer que esse elemento é unico na tabela ou seja ninguem mais usa o msm email
     private String email;
 
     @ManyToOne// Essa Anottation diz que esse atributo da classe pode conter somente uma missao
