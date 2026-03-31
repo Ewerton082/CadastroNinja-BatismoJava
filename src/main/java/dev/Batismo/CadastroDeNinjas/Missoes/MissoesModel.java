@@ -2,6 +2,9 @@ package dev.Batismo.CadastroDeNinjas.Missoes;
 
 import dev.Batismo.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_missoes")
@@ -13,7 +16,8 @@ public class MissoesModel {
     private String nomeMissao;
     private DificuldadeEnum dificuldade;
 
-    private NinjaModel ninja;
+    @OneToMany(mappedBy = "missoes") // Aqui diz que diversos Ninjas podem ter essa missao e tbm n entendi bem como conecta uma na outra
+    private List<NinjaModel> ninjas;
 
     public MissoesModel(long id, String nomeMissao, DificuldadeEnum dificuldade) {
         this.id = id;

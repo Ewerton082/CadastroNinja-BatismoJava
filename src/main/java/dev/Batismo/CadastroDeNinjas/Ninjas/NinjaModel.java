@@ -13,12 +13,18 @@ public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Aqui dizemos que vai ser generado nessa estrategia
     private long id;
-    private String nome;
-    private int idade;
-    private String email;
-    private List<MissoesModel> missoes;
 
-    public NinjaModel(long id, String nome, int idade, String email, List<MissoesModel> missoes) {
+    private String nome;
+
+    private int idade;
+
+    private String email;
+
+    @ManyToOne// Essa Anottation diz que esse atributo da classe pode conter somente uma missao
+    @JoinColumn(name = "missoes_id") // ForeingKey (PS: N entendi muito bem isso)
+    private MissoesModel missoes;
+
+    public NinjaModel(long id, String nome, int idade, String email, MissoesModel missoes) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
@@ -26,11 +32,11 @@ public class NinjaModel {
         this.missoes = missoes;
     }
 
-    public List<MissoesModel> getMissoes() {
+    public MissoesModel getMissoes() {
         return missoes;
     }
 
-    public void setMissoes(List<MissoesModel> missoes) {
+    public void setMissoes(MissoesModel missoes) {
         this.missoes = missoes;
     }
 
