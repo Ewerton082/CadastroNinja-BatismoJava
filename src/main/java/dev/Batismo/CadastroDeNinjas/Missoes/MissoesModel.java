@@ -3,8 +3,6 @@ package dev.Batismo.CadastroDeNinjas.Missoes;
 import dev.Batismo.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.web.bind.annotation.GetMapping;
-
 import java.util.List;
 
 @Entity
@@ -16,7 +14,7 @@ public class MissoesModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String nomeMissao;
     private DificuldadeEnum dificuldade;
 

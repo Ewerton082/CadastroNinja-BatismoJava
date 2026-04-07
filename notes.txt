@@ -61,3 +61,17 @@ Arquitetura é um plano na qual atribuimos um padrão para ficar mais fazcil o e
 
 Nesse projeto estamos usando arquitetura em camadas
 
+-----------------------------------------------------------------------------------------------------------------------
+JPARepository
+
+é uma lib que ajuda a modificar e usar um banco de dados introduzindo-nos varios metodos para ser mais pratico
+
+JpaRepository<MissoesModel, Long>
+
+para usado é necessario usar ele no repository e passar atributos<"O model que sera usado", "O Tipo do Id"
+
+seja long, int, short ou string
+
+
+
+
