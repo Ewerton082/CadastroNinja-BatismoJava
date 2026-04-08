@@ -22,8 +22,10 @@ public class NinjaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Aqui dizemos que vai ser generado nessa estrategia
     private Long id;
 
+    @Column(name = "Nome do Ninja")
     private String nome;
 
+    @Column(name = "Age")
     private int idade;
 
     @Column(unique = true) // para dizer que esse elemento é unico na tabela ou seja ninguem mais usa o msm email
