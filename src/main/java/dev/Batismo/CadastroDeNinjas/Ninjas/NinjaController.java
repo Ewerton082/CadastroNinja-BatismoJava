@@ -1,8 +1,6 @@
 package dev.Batismo.CadastroDeNinjas.Ninjas;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 // Esse decorator diz que essa classe abaixo é um controlador de apirest
 @RestController
@@ -16,5 +14,34 @@ public class NinjaController { // mais uma Vez o Padrao SPRING sufixo Controller
         return "Essa é Minha primeira Mensagem do projeto";
     }
 
+    // Adicionar Ninja
+    @PostMapping("/criarNinja")
+    public String criarNinja(){
+        return "Ninja Criado";
+    }
+
+    //Procurar Ninja por ID
+    @GetMapping("/selecionarID")
+    public String Ninja(){
+        return "Ninja Escolhido";
+    }
+
+    // Mostrar Ninjas
+    @GetMapping("/todos")
+    public String todsNinjas(){
+        return "Todos Ninjas";
+    }
+
+    //Editar dados dos ninjas
+    @PutMapping("/editarID")
+    public String atualizarDados(){
+        return "Editando Ninja selecionado";
+    }
+
+    //Deletar Ninja
+    @DeleteMapping("/editarID")
+    public String deletarNinja(){
+        return "Apagando Ninja da existencia";
+    }
 
 }
