@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 // Esse decorator diz que essa classe abaixo é um controlador de apirest
 @RestController
 // o Decorator que diz que essa classe é o que vai mapear as rotas
-@RequestMapping
+@RequestMapping(path = "ninja")
 public class NinjaController { // mais uma Vez o Padrao SPRING sufixo Controller
 
     //o getMapping é oque vai nomear a rota ou seja o endereço
@@ -15,31 +15,31 @@ public class NinjaController { // mais uma Vez o Padrao SPRING sufixo Controller
     }
 
     // Adicionar Ninja
-    @PostMapping("/criarNinja")
+    @PostMapping("/criar")
     public String criarNinja(){
         return "Ninja Criado";
     }
 
     //Procurar Ninja por ID
-    @GetMapping("/selecionarID")
+    @GetMapping("/ID")
     public String Ninja(){
         return "Ninja Escolhido";
     }
 
     // Mostrar Ninjas
-    @GetMapping("/todos")
+    @GetMapping("")
     public String todsNinjas(){
         return "Todos Ninjas";
     }
 
     //Editar dados dos ninjas
-    @PutMapping("/editarID")
+    @PutMapping("/edit/ID")
     public String atualizarDados(){
         return "Editando Ninja selecionado";
     }
 
     //Deletar Ninja
-    @DeleteMapping("/editarID")
+    @DeleteMapping("/delete/ID")
     public String deletarNinja(){
         return "Apagando Ninja da existencia";
     }
