@@ -74,4 +74,42 @@ seja long, int, short ou string
 
 -----------------------------------------------------------------------------------------------------------------------
 
+COMO FUNCIONA BANCO DE DADOS
+
+Qualquer ação é chamada Query esse é o nome dado para tudo que vc faz
+
+SELECT * FROM TB_CADASTRO > Selecione Tudo da tabela TB_CADASTRO
+
+o * significa todos
+
+É CONVENÇÃO E INDICADO USAR SEMPRE LETRA MAIUSCULA
+
+INSERT INTO TB_MISSOES (ID, DIFICULDADE, NOME_MISSAO) > Adiciona na Tabela TB_MISSOES (ID, DIFICULDADE, NOME_MISSAO)
+VALUES(2, 'RANK_S', 'Matar o Killua') > valores(2, 'RANK_S', 'Matar o Killua')
+
+AVISO
+
+se o banco de dados ja estiver rodando ou algo do tipo nunca mexa no model do projeto para não cagar no pau
+
+se ja ta rodando faça direto pelo banco de dados
+
+-----------------------------------------------------------------------------------------------------------------------
+Flyway
+
+é uma extensão do spring que cuida do versionamento do seu banco de dados de forma segura
+
+após baixar ele crie na pastar resources as pastas db/migrations e nela será adicionado as alterações por padrao usamo sempre a seguinte nomeclatura
+
+V2__Add_rank_tb_cadastro.sql
+
+sempre o V no inicio acompanhado do numero e doi traços __
+
+oque vem depois é a msg e sempre arquivo sql
+
+após isso configurar o application properties
+
+# Configurar FlyWay
+spring.flyway.enable=true
+spring.flyway.locations=classpath:db/migrations
+spring.fliway.baseline-on-migrate=true
 

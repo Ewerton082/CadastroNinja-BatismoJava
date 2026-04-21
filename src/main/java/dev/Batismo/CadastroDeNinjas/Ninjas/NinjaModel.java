@@ -22,7 +22,6 @@ public class NinjaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Aqui dizemos que vai ser generado nessa estrategia
     private Long id;
 
-    @Column(name = "Nome do Ninja")
     private String nome;
 
     @Column(name = "Age")

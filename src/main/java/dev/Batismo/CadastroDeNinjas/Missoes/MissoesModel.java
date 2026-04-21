@@ -16,6 +16,7 @@ public class MissoesModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomeMissao;
+    @Enumerated(EnumType.STRING)
     private DificuldadeEnum dificuldade;
 
     @OneToMany(mappedBy = "missoes") // Aqui diz que diversos Ninjas podem ter essa missao e tbm n entendi bem como conecta uma na outra
