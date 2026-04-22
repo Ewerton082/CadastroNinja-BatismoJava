@@ -72,6 +72,9 @@ para usado é necessario usar ele no repository e passar atributos<"O model que 
 
 seja long, int, short ou string
 
+Descobri tambem que em resumo o JPA é um toolKit de crud ajudando você a fazer todas operações de um Crud
+que fazemos isso no service
+
 -----------------------------------------------------------------------------------------------------------------------
 
 COMO FUNCIONA BANCO DE DADOS
@@ -112,4 +115,16 @@ após isso configurar o application properties
 spring.flyway.enable=true
 spring.flyway.locations=classpath:db/migrations
 spring.fliway.baseline-on-migrate=true
+
+-----------------------------------------------------------------------------------------------------------------------
+Começando SERVICE
+
+crie uma instancia do seu repository la e atribua a annotation @AutoWired
+
+enfrentamos um problema de serialização no many to one field @JsonIgnore para que n entre em um eterno loop
+
+lembrando sempre de usar o ToolKit que vem no JPArepository
+
+@PathVariable é a annotation usada quando na url é passado algum parametro tipo o id para pegar um dado em especifico
+ela é colocada no controller passando ela depois o TIPO e o nome
 

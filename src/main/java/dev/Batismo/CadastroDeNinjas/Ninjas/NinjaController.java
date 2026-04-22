@@ -1,12 +1,18 @@
 package dev.Batismo.CadastroDeNinjas.Ninjas;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 // Esse decorator diz que essa classe abaixo é um controlador de apirest
 @RestController
 // o Decorator que diz que essa classe é o que vai mapear as rotas
 @RequestMapping(path = "ninja")
 public class NinjaController { // mais uma Vez o Padrao SPRING sufixo Controller
+
+    @Autowired
+    private NinjaService ninjaService;
 
     //o getMapping é oque vai nomear a rota ou seja o endereço
     @GetMapping("/boasVindas")
@@ -21,15 +27,15 @@ public class NinjaController { // mais uma Vez o Padrao SPRING sufixo Controller
     }
 
     //Procurar Ninja por ID
-    @GetMapping("/ID")
-    public String Ninja(){
-        return "Ninja Escolhido";
+    @GetMapping("")
+    public List<NinjaModel> todosninjas(){
+        return ninjaService.todosNinjas();
     }
 
     // Mostrar Ninjas
-    @GetMapping("")
-    public String todsNinjas(){
-        return "Todos Ninjas";
+    @GetMapping("{id}")
+    public NinjaModel ninja(@PathVariable Long id){ // aqui usa o Path Variable para pegar um dado que ta na url entre chaves {}
+        return ninjaService.ninja(id); // Retornando o Ninja selecionado
     }
 
     //Editar dados dos ninjas

@@ -1,5 +1,6 @@
 package dev.Batismo.CadastroDeNinjas.Missoes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.Batismo.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 import lombok.*;
@@ -19,6 +20,7 @@ public class MissoesModel {
     @Enumerated(EnumType.STRING)
     private DificuldadeEnum dificuldade;
 
+    @JsonIgnore // ele conserta o erro de serialização para n entrar num loop eterno
     @OneToMany(mappedBy = "missoes") // Aqui diz que diversos Ninjas podem ter essa missao e tbm n entendi bem como conecta uma na outra
     private List<NinjaModel> ninjas;
 
